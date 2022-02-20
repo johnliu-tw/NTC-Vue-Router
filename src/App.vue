@@ -1,8 +1,12 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
     <router-link to="/test">Test</router-link> 
+    <br/>
+    <li v-for=" i in 5" :key="i">
+      <router-link :to="`/products/${i}`">Product {{ i }}</router-link>
+    </li>
   </nav>
   <router-view/>
 </template>
